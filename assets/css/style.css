@@ -1,0 +1,12 @@
+
+@import  url ( 'https://fonts.googleapis.com/css2? family= Libre+Baskerville:wght@700 & family= Mada & family= Poppins:wght@200;600;900 & display=swap' ) ;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    background-image: linear-gradient(to bottom,#000000,#ffffff,#3fccb0);
+}
