@@ -14,7 +14,7 @@
     --font-bottom:'Assistant';
     --color-default:#fff; 
     --color-secundar:#f2f206; 
-    --color-hover:#0938f6;
+    --color-hover:#00c53b;
 }
 header{
     display: flex; /*flex box*/ 
@@ -31,7 +31,10 @@ body {
     font-weight: 900;
     
 }
+
+/*
 html{ scroll-behavior: smooth; } 
+*/
 #cabecalho{
     width: 100%;
     height: 180px;
@@ -115,19 +118,39 @@ h1{ /*o diaplay é block*/
 #div_imagem_centro{
     background-image: url('../image/image02.jpg');
     background-size: cover;
-    height: 530px;
+    height: 520px;
     margin-top: 10px;    
     margin-left: 420px;
-    color:#FBF8F8;
-    font-family: 'Mada', sans-serif;    
+    color:var(--color-default);
+    font-family:var(--font-heading);    
 }
+
+#div_imagem_centro{    
+    border-radius: 5%;
+    height: 520px; 
+    animation: zoom 5s ease-in-out;   
+}
+/*transição de zoom*/
+@keyframes zoom { 
+    0% {
+        transform: scale(0.4, 0.4);
+      }
+      50% {
+        transform: scale(1.3, 1.3);
+      }
+      100% {
+        transform: scale(1, 1);
+      }
+    }
+
+    
+
 #shows{
     display: flex;
-    /*justify-content: space-between;*/
-   
+    justify-content: space-between; 
+    
     margin: 2px;   
     display: flex; /*para alinhar e distribuir os links*/   
-
     flex-direction: column; 
     gap: 5px;   
 }
@@ -161,14 +184,16 @@ a{
      }
  #sessao-projetos ul{ 
     display: flex; 
-    justify-content: space-around; 
     list-style: none;
+    justify-content: space-between;
+    gap: 15px;
 } 
  .card-image img { 
     height: 400px; 
     width: 300px; 
     border-radius: 40px; 
     padding-top: 20px;
+
 } 
  .card-info{ 
     position: absolute; 
@@ -179,4 +204,18 @@ a{
     font-family: var(--font-heading);
     font-size: 35px;
  } 
- #sessao-projetos li{ position: relative; top: 0; }
+ #sessao-projetos li{ 
+    position: relative;
+    top: 0;
+   
+ }
+ #rodape{
+    margin-top: 10px;  
+    margin-left: 500px;
+    font-family:var(--font-bottom);   
+    font-size:15px;
+    font-weight: 700;
+    background:#3a3a4032;
+    color:var(--color-hover);
+}
+
